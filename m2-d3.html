@@ -1,16 +1,3 @@
-<!-- MANDATORY JS EXERCISES (continue from yesterday's file for this exercise)
-    1) Create two inputs for picking up colors in the page, and a button with "Apply Colors" as text
-    2) Grab all <li> in the page from the DOM, and save them in a variable called "listItems"
-    3) Grab the inputs references via DOM manipulation and save them in variables
-    4) Create a function and attach it to the "Apply Colors" button click event
-    5) Cycle listItems inside the function. Verify that the function and the loop work by logging in the console 
-        each item from the loop every time the button gets clicked
-    6) Move the inputs references in the function. Use the first input value as background-color for the item, and the second one for the text color.
-
-    If you receive black as a color check where you have the inputs references.
-    You should now see the list-items color and background-color change at the click of the button.
--->
-
 <!-- M2-D3 ASSIGNMENT RULES
         - This challenge should be done in pairs, go in Eduflow to find who you are paired with
         - Implement one exercise each, switching side from driver and navigator frequently
@@ -102,14 +89,17 @@
               Dropdown
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#welcome-summer">Welcome Summer</a>
+              <a class="dropdown-item" href="#dealOftheDay">Specials</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#lastMinute">Last Minutes</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">Contact Us</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -236,7 +226,7 @@
                 - 3 destinations per row when you are on a tablet (or a smaller window)
                 - 2 destinations per row when you are on a small screen -->
 
-    <section class="welcome-summer">
+    <section id="welcome-summer">
       <button
         class="btn btn-outline-primary"
         data-toggle="collapse"
@@ -535,7 +525,6 @@ Ex 16) Create a function to delete all "cards" from the page -->
         </div>
       </div>
     </section>
-
     <footer
       class="
         container-fluid
@@ -559,6 +548,56 @@ Ex 16) Create a function to delete all "cards" from the page -->
 
       <span>© 2021 Super Viaggio LTD. All Rights Reserved.</span>
     </footer>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Contact us</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Email"
+                aria-label="Email"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+            <div class="input-group">
+              <textarea
+                class="form-control"
+                aria-label="With textarea"
+              ></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -574,7 +613,7 @@ Ex 16) Create a function to delete all "cards" from the page -->
     ></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <script>
+    <script src="index.js">
       window.onload = function () {
         const countTravels = function () {
           const cards = document.querySelectorAll(".card");
