@@ -1,5 +1,13 @@
 //  MANDATORY JS EXERCISES (continue from yesterday's file for this exercise)
 //     1) Create two inputs for picking up colors in the page, and a button with "Apply Colors" as text
+
+function myFunction() {
+  let x = document.getElementById("myText").value;
+  document.getElementById("ptag").style.color = x;
+}
+
+myFunction();
+
 //     2) Grab all <li> in the page from the DOM, and save them in a variable called "listItems"
 //     3) Grab the inputs references via DOM manipulation and save them in variables
 //     4) Create a function and attach it to the "Apply Colors" button click event
